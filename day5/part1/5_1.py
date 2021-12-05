@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 from colored import style
 import os
-from functools import reduce
-from operator import concat
+import progressbar
 
 
 def points_of_line(start: tuple, end: tuple) -> list:
@@ -20,7 +19,7 @@ def points_of_line(start: tuple, end: tuple) -> list:
 
 def main():
     dirname = os.path.dirname(__file__)
-    filename = os.path.join(dirname, '../example.txt')
+    filename = os.path.join(dirname, '../input.txt')
     with open(filename, "r") as myfile:
         rows = myfile.read().splitlines()
 
@@ -42,7 +41,11 @@ def main():
 
     checklist = []
     overlaps = set()
+    bar = progressbar.ProgressBar(len(all_points)).start()
+    progress_current = 0
     for point in all_points:
+        progress_current += 1
+        bar.update(progress_current)
         if point in checklist:
             overlaps.add(point)
         else:
