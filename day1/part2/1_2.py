@@ -4,7 +4,6 @@ import numpy as np
 
 
 def main():
-    """ Main entry point of the app """
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, '../input.txt')
     with open(filename, "r") as myfile:
