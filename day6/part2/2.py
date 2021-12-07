@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from colored import style
 import os
-import progressbar
 
 DEFAULT_TIMER = 6
 DEFAULT_FRESH_TIMER = 8
