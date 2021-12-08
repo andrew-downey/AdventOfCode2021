@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-from colored import style
 import os
-import progressbar
 
 
 def main():
@@ -11,7 +9,7 @@ def main():
         rows = myfile.read().splitlines()
 
     print("")
-    print(style.BOLD + "Total Overlaps: " + style.RESET + str(len(overlaps)))
+    print("Total: " + str(len(rows)))
 
 
 if __name__ == "__main__":
