@@ -4,7 +4,7 @@ import os
 
 def main():
     dirname = os.path.dirname(__file__)
-    filename = os.path.join(dirname, '../input.txt')
+    filename = os.path.join(dirname, '../example.txt')
     with open(filename, "r") as myfile:
         rows = myfile.read().splitlines()
 
