@@ -4,11 +4,6 @@ import os
 from graphviz import Digraph
 
 
-class Cave:
-    def __init__(self, name, connections):
-        pass
-
-
 def main():
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, '../input.txt')
@@ -57,7 +52,7 @@ def main():
             visited_twice = True
 
         for neighbour in neighbours:
-            if neighbour.isupper() or (neighbour.islower() and not visited_twice and len([node for node in current_path if node == neighbour]) < 2):
+            if neighbour.isupper() or (neighbour.islower() and not visited_twice and len([node for node in current_path if node == neighbour]) < 1):
                 frontier.append(current_path + [neighbour])
 
     print("")

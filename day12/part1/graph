@@ -13,47 +13,47 @@ digraph {
 	start [label=start]
 	cj [label=cj]
 	bm -> XY
-	bm -> QI
-	bm -> gq
-	bm -> cj
 	bm -> im
 	bm -> AF
+	bm -> cj
+	bm -> QI
+	bm -> gq
 	XY -> bm
-	ol -> JS
+	ol -> RD
 	ol -> ja
 	ol -> AF
-	ol -> RD
-	JS -> gq
-	JS -> ja
+	ol -> JS
 	JS -> ol
-	im -> bm
-	im -> end
+	JS -> ja
+	JS -> gq
 	im -> QI
 	im -> gq
-	RD -> gq
-	RD -> ja
+	im -> end
+	im -> bm
 	RD -> ol
-	QI -> bm
-	QI -> gq
+	RD -> ja
+	RD -> gq
 	QI -> end
-	QI -> ja
 	QI -> im
-	ja -> JS
-	ja -> QI
-	ja -> gq
+	QI -> bm
+	QI -> ja
+	QI -> gq
 	ja -> RD
 	ja -> ol
-	gq -> bm
-	gq -> JS
-	gq -> QI
+	ja -> QI
+	ja -> gq
+	ja -> JS
 	gq -> RD
-	gq -> ja
+	gq -> bm
 	gq -> im
-	AF -> bm
-	AF -> end
+	gq -> ja
+	gq -> QI
+	gq -> JS
 	AF -> ol
+	AF -> end
+	AF -> bm
 	start -> RD
-	start -> JS
 	start -> ol
+	start -> JS
 	cj -> bm
 }
